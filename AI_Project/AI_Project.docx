@@ -1,0 +1,6 @@
+Data july/9/2025
+
+update ; Built a LSTM model for the prediction of the next words in the emial 
+
+error:
+model is to week need to train the model in more data 
