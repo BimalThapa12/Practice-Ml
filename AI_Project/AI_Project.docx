@@ -6,3 +6,5 @@ error:
 model is to week need to train the model in more data 
 
 Made a LSTM model for the Email prediction
+
+Trained a GRU model got better out put than LSTM 
