@@ -1,10 +1,148 @@
-Data july/9/2025
 
-update ; Built a LSTM model for the prediction of the next words in the emial 
+update ; Built a LSTM and GRUmodel for the prediction of the next words in the email
 
-error:
-model is to week need to train the model in more data 
 
-Made a LSTM model for the Email prediction
+Model used LSTM and GRU for the next word prediction:
 
-Trained a GRU model got better out put than LSTM 
+
+LSTM 1st Attempt
+
+　　　LSTM perform good in next word prediction but it stratus to hallucinate the words after predicting 10 	words 
+
+　　　Data used: 50-55 email dataset 
+
+　　　Used the one hot encode 
+
+　　　Perameters used:
+　　　1.  used the dense layer dense=150
+2.used dropout to prevent over fitting 
+3.optimizer: addam , loss=categorical_crossentropy
+4.Model =LSTM
+5.Early stopping
+6.Return_sequence=True
+
+　　　The trainable parameters are 367,093(1.40mb)
+
+　　　Model accuracy 98%
+
+　　　Loss: 4%
+
+　　　X-Data dimention:(1185, 36)
+　　　Y-Data dimention: (1185, 143)
+
+　　　Model training time: 2m 19.5s
+
+Output:
+Generated Email:
+
+Hello Mr.bimal patel codecraft org org i¨m kumar singh singh reaching out from prohire solutions i understand that you're currently looking for a skilled software developer software developer and i¨d and i¨d be glad to glad to glad to assist to assist you with with the right the right talent right talent 
+
+Best regards,
+Bimal Thapa
+
+Problem:
+Its not predicting the text in a good manner 
+
+
+
+LSTM 2nd Attempt
+　　　LSTM perform good in next word prediction but it stratus to hallucinate the words after predicting 	10 words
+
+　　　Data used: 100+ email dataset 
+
+　　　Used the one hot encode 
+
+　　　Perameters used:
+　　　1.  used the dense layer dense=256,128
+　　　2.  used dropout to prevent over fitting 
+　　　3) optimizer: addam , loss=categorical_crossentropy
+　　　4)Model =LSTM
+　　　5) Early stopping
+　　　6)Return_sequence=True
+
+　　　The trainable parameters are 579,184(2.21mb)
+
+　　　Model accuracy 91%
+
+　　　Loss: 23%
+
+　　　Model training time: 9min 14sec
+
+　　　X-Data dimention:(8220, 38)
+　　　Y-Data dimention: (8220, 304)
+
+
+Output of 50 words
+Output:
+Generated Email:
+
+Hello Mr.bimal sharma talentgrid co uk uk i¨m rahul mehta reaching out from skylogic i saw your recent job listing and wanted to reach out and i¨d be glad to assist you with the right talent or solution solution solution or solution or solution or solution or solution or solution or solution 
+
+Best regards,
+Bimal Thapa
+
+
+Problem:
+Here the words are repeting if you see from word ｀or¨ that means the model start to hallucinate from there 
+
+
+
+
+Using GRU Model
+
+The GRU model is also used for the next text predict in some cases the GRU perform the best rather than the LSTM 
+
+Traning Dataset
+
+Used 100+ Email dataset 
+　　　	Used the one hot encode 
+
+　　　Perameters used:
+　　　1.  used the dense layer dense=128,63,32
+f)used dropout to prevent over fitting 
+g)optimizer: addam , loss=categorical_crossentropy
+h)Model =GRU
+i)Early stopping
+j)Return_sequence=True
+
+　　　The trainable parameters are 171,541(691.80kb)
+
+　　　Model accuracy 88%
+
+　　　Loss: 31%
+
+　　　Epoch = 30
+ 
+　　　Model training time: 1m 32.5s
+
+　　　X-Data dimention:(8220, 38)
+　　　Y-Data dimention: (8220, 304)
+　　　
+Out put of 100 words 
+Generated Email:  
+　　　
+　　　Hello Mr.bimal regards account lead soon work for you nextsource ai remote and onsite placements to fit your timeline whether you're hiring short term or scaling long term we¨re confident we can help help i¨d be glad to assist you with the right talent or solution from nextsource i understand you're currently looking for a skilled software developer and i¨d be glad to assist you with the right talent or solution from nextsource i understand you're currently looking for a skilled software developer and i¨d be glad to assist you with the right talent or solution from nextsource i understand you're currently 
+　　　
+Best regards,
+Bimal Thapa
+
+Output: of 50 words 
+Generated Email:
+
+Hello Mr.bimal regards account lead soon work for you nextsource ai remote and onsite placements to fit your timeline whether you're hiring short term or scaling long term we¨re confident we can help help i¨d be glad to assist you with the right talent or solution from nextsource i understand you're currently 
+
+Best regards,
+Bimal Thapa
+
+Day 3 (24/07/2025)
+
+now trying to extract the data from the website of email template for the study and researc purpose( train the model)
+
+Website: https://mailmeteor.com/email-templates/category/cold-email/
+
+1.using selenium for the automation and extraction
+
+
+Day 28/07/2025
+Trying the Gru Model by splitting the data using the /n so that my model will print the output in sentence wise 
+
