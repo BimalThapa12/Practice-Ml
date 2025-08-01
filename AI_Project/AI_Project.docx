@@ -146,3 +146,24 @@ Website: https://mailmeteor.com/email-templates/category/cold-email/
 Day 28/07/2025
 Trying the Gru Model by splitting the data using the /n so that my model will print the output in sentence wise 
 
+Attempt 1
+Successfully generated the email and sepereted it sentence wise using the punctuation's 
+
+Out put:
+
+
+Day 29/07/2025
+
+Created a dataset of email in json format in such a way that the model first mainly focus on greeting part and later moves to 2nd part of the email body like that we have 5 parts of the body 
+
+See you after I train the model :)
+section_1	section_2	section_3	section_4	section_5
+0	Trust you're doing well and staying productive.	We came across your requirement posted on Free...	We specialize in providing efficient outsource...	From ticket resolution to backend automation, ...	We¡¯re happy to provide a walkthrough or propos...
+1	I hope you're having a wonderful day.	Your opportunity listed on Upwork drew our att...	Our domain experts handle routine and complex ...	We deliver custom solutions that blend speed, ...	Please share your availability for a quick cal...
+2	Trust you're doing well and staying productive.	We came across your requirement posted on Free...	Our experience includes collaborating with glo...	Our flexible engagement models let you focus o...	Looking forward to scheduling a conversation a...
+3	Trust you're doing well and staying productive.	While browsing AngelList, we noticed your job ...	Our experience includes collaborating with glo...	Our flexible engagement models let you focus o...	Looking forward to scheduling a conversation a...
+4	Hope everything is going smoothly at your end.	While browsing AngelList, we noticed your job ...	Our domain experts handle routine and complex ...	Our flexible engagement models let you focus o...	Looking forward to scheduling a conversation a...
+
+
+This is the Data format 
+
